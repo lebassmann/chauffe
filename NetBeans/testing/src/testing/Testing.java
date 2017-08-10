@@ -13,7 +13,7 @@ import static metier.materiel.pilotage.ArduinoType.*;
 
 /**
  *
- * @author jazz
+ * @author Arez
  */
 public class Testing {
 
