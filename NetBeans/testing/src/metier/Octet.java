@@ -28,7 +28,7 @@ package metier;
  */
 public class Octet {
 
-    int myByte;    
+    int monOctet;    
     boolean bit0;
     boolean bit1;
     boolean bit2;
@@ -103,7 +103,11 @@ public class Octet {
     }
     
     
-    
+    /**
+     * Convert an integer signed into binary bits of octet
+     * 
+     * @param b an integer to convert
+     */
     private void convertIntoBits(int b) {
         
         setBit0(b%2 != 0);
