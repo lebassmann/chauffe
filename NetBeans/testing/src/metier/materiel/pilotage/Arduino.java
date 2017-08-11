@@ -12,6 +12,7 @@ package metier.materiel.pilotage;
 public abstract class  Arduino implements IArduino{
 
     int arduinoID;
+    String arduinoBluetoothID;
     /**
      * Set an ID for the Arduino card, must be in range of 0-255
      * This depending of the protocole implementation taht accepte only
@@ -25,7 +26,7 @@ public abstract class  Arduino implements IArduino{
 
     @Override
     public void setArduinoBlutoothID(String arduinoBluetoothID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.arduinoBluetoothID = arduinoBluetoothID;
     }
     
 }
