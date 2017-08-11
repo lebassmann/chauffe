@@ -23,7 +23,7 @@ package metier;
  * integer is less than 0, a converted value is returned with many mistakes.
  *
  *
- * @author jazz
+ * @author Arez
  */
 public class Octet {
 
