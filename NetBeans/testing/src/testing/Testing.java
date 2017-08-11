@@ -78,6 +78,7 @@ public class Testing {
         ArduinoFactory makeArduino = new ArduinoFactory();
         Arduino myarduino1 = makeArduino.getArduino(COMMAND);
         myarduino1.setArduinoID(0);
+        System.out.println("La carte Arduino a un identifiant");
     }
     
 }
