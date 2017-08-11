@@ -20,6 +20,7 @@ package metier.planning;
  *
  * @author jazz
  */
-public class PlanningDate implements IPlanningDate{
+public class PlanningDate implements IPlanningDate {
+        // TODO : make all function to set planning date for programming temps in room
 
 }
