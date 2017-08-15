@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Arezki GASTAUD.
+ * Copyright 2017 Arezki GASTAUD gastaud.arezki@neuf.fr.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,16 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package source;
+package TestConsoleOutpu;
+
+import metier.Octet;
 
 /**
  *
- * @author Arezki GASTAUD
+ * @author Arezki GASTAUD gastaud.arezki@neuf.fr
  */
-public class Fonctions {
-    // TODO : protocole
-    // TODO : connexion
-    // TODO : base de données
-    // TODO : traitement des données
+public class Tester {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Octet myByte = new Octet(202);
+        System.out.println("mon octet vaut : " + myByte.displayBinString() + " et " + myByte.toString());
+    }
     
 }
