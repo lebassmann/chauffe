@@ -28,5 +28,8 @@ public abstract class  Arduino implements IArduino{
     public void setArduinoBlutoothID(String arduinoBluetoothID) {
         this.arduinoBluetoothID = arduinoBluetoothID;
     }
+    public void test(){
+        System.out.println("coucou");
+    }
     
 }
