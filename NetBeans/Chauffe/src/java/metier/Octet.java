@@ -171,4 +171,18 @@ public class Octet {
     private void convertByteIntoBits(byte byteToUnsign) {
 
     }
+
+    @Override
+    public boolean equals(Object octetToCompare) {
+        Octet localoctet = (Octet) octetToCompare;
+        String loca1String = this.displayBinString();
+        String compare = localoctet.displayBinString();
+        for (int i = 0; i < 8; i++) {
+            if (!compare.equals(loca1String)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
