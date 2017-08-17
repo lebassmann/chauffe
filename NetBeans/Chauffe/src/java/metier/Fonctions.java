@@ -24,7 +24,10 @@ public class Fonctions {
     // TODO : protocole
     public int returnIntCodedArduino(Octet low0, Octet low1, Octet low2, Octet low3) {
         int returnedInt = 0;
-        
+        int lowInt0 = low0.getOctetInt();
+        int lowInt1 = low1.getOctetInt() * 256;
+        int lowInt2 = low2.getOctetInt() *256 *256;
+        int lowInt3 = low2.getOctetInt() *256 *256 *256;
 
         return returnedInt;
     }
