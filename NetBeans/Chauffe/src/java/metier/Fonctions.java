@@ -28,7 +28,7 @@ public class Fonctions {
         int lowInt1 = low1.getOctetInt() * 256;
         int lowInt2 = low2.getOctetInt() *256 *256;
         int lowInt3 = low2.getOctetInt() *256 *256 *256;
-
+        returnedInt = lowInt0+lowInt1+lowInt2+lowInt3;
         return returnedInt;
     }
     // TODO : connexion
