@@ -189,16 +189,11 @@ public class Octet {
      */
     public Octet(String binaryStringToConvertInOctet) {
         if (binaryStringToConvertInOctet.length() != 8) {
-
+            // TODO make an exception for overflow
             System.out.println("Erreur de taille de la chaine passée en parametre");
 
         } else {
-            if ("1".equals(binaryStringToConvertInOctet.substring(0, 1))) {
-                setBit7(true);
-            } else {
-                setBit7(false);
-            }
-            //boolean test = ("1".equals(binaryStringToConvertInOctet.substring(1, 2)));
+            setBit7(("1".equals(binaryStringToConvertInOctet.substring(0, 1))));
             setBit6(("1".equals(binaryStringToConvertInOctet.substring(1, 2))));
             setBit5(("1".equals(binaryStringToConvertInOctet.substring(2, 3))));
             setBit4(("1".equals(binaryStringToConvertInOctet.substring(3, 4))));
@@ -247,6 +242,20 @@ public class Octet {
             }
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 59 * hash + (this.bit0 ? 1 : 0);
+        hash = 59 * hash + (this.bit1 ? 1 : 0);
+        hash = 59 * hash + (this.bit2 ? 1 : 0);
+        hash = 59 * hash + (this.bit3 ? 1 : 0);
+        hash = 59 * hash + (this.bit4 ? 1 : 0);
+        hash = 59 * hash + (this.bit5 ? 1 : 0);
+        hash = 59 * hash + (this.bit6 ? 1 : 0);
+        hash = 59 * hash + (this.bit7 ? 1 : 0);
+        return hash;
     }
 
     /**
@@ -298,8 +307,7 @@ public class Octet {
     }
 
     /**
-     * Convert an integer signed into binary bits of octet
-     *
+     * This method convert an integer signed into binary bits of octet     *
      *
      * @param inputInteger an integer to convert, must be under 255 and positive
      */
